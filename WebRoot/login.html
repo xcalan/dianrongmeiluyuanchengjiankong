@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>电熔镁炉远程监控系统登录页面</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <style>
+    #login_click{ margin-left:25%;margin-top:35px; width:100px;height:20px;}  
+    #login_click  
+    {  
+        text-decoration:none;  
+        background:#229ffd;  
+        color:#f2f2f2;  
+        
+        padding: 10px 30px 10px 30px;  
+        font-size:16px;  
+        font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;  
+        font-weight:bold;  
+        border-radius:3px;  
+        
+        -webkit-transition:all linear 0.30s;  
+        -moz-transition:all linear 0.30s;  
+        transition:all linear 0.30s;   
+        }  
+        h1 { 
+            /* position:absolute; */
+            width:100%; 
+            display:block; 
+            line-height:1.5em; 
+            overflow:visible; 
+            font-size:22px; 
+            text-shadow:#f3f3f3 1px 1px 0px, #b2b2b2 1px 2px 0;
+            margin-left: 12%;
+            margin-top: 15%
+        }
+  </style>
+</head>
+<body>
+
+<div id="particles-js">
+		<div class="login">
+            <h1>电熔镁炉远程移动监控系统</h1>
+			<div class="login-top" style="margin-top:55px;">
+				登录
+            </div>
+            <form action="servlet/LoginServlet" method="get">
+                <div class="login-center clearfix">
+                    <div class="login-center-img"><img src="img/name.png"/></div>
+                    <div class="login-center-input">
+                        <input type="text" name="username" value="" placeholder="请输入您的用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的用户名'"/>
+                        <div class="login-center-input-text">用户名</div>
+                    </div>
+                </div>
+                <div class="login-center clearfix">
+                    <div class="login-center-img"><img src="img/password.png"/></div>
+                    <div class="login-center-input">
+                        <input type="password" name="password"value="" placeholder="请输入您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'"/>
+                        <div class="login-center-input-text">密码</div>
+                    </div>
+                </div>
+                <input id="login_click" type="submit" value="登  录">
+            </form>
+		</div>
+		<div class="sk-rotating-plane"></div>
+</div>
+
+<!-- scripts -->
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+<!-- <script type="text/javascript">
+	function hasClass(elem, cls) {
+	  cls = cls || '';
+	  if (cls.replace(/\s/g, '').length == 0) return false; //当cls没有参数时，返回false
+	  return new RegExp(' ' + cls + ' ').test(' ' + elem.className + ' ');
+	}
+	 
+	function addClass(ele, cls) {
+	  if (!hasClass(ele, cls)) {
+	    ele.className = ele.className == '' ? cls : ele.className + ' ' + cls;
+	  }
+	}
+	 
+	function removeClass(ele, cls) {
+	  if (hasClass(ele, cls)) {
+	    var newClass = ' ' + ele.className.replace(/[\t\r\n]/g, '') + ' ';
+	    while (newClass.indexOf(' ' + cls + ' ') >= 0) {
+	      newClass = newClass.replace(' ' + cls + ' ', ' ');
+	    }
+	    ele.className = newClass.replace(/^\s+|\s+$/g, '');
+	  }
+	}
+		document.querySelector(".login-button").onclick = function(){
+				addClass(document.querySelector(".login"), "active")
+				setTimeout(function(){
+					addClass(document.querySelector(".sk-rotating-plane"), "active")
+					document.querySelector(".login").style.display = "none"
+				},800)
+				setTimeout(function(){
+					removeClass(document.querySelector(".login"), "active")
+					removeClass(document.querySelector(".sk-rotating-plane"), "active")
+					document.querySelector(".login").style.display = "block"
+					alert("登录成功")
+					
+				},1000)
+		}
+</script> -->
+</body>
+</html>
