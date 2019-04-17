@@ -22,10 +22,10 @@ var chart = Highcharts.chart('u116_img', {
 					var x = (new Date()).getTime(), // 当前时间
 //						y = 14000*Math.random();  // 随机值
 						y = data[i].actionC;//C相电机转动频率
-//					i=i+1
-//					if(i>=1000){
-//						i=0;
-//					}
+					i=i+1
+					if(i>=1000){
+						i=0;
+					}
 					series.addPoint([x, y], true, true);
 					activeLastPointToolip(chart);
 				});//实时更新

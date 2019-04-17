@@ -34,10 +34,10 @@ var chart = Highcharts.chart('u433_img', {
 						if(document.getElementById("stop_imit").style.color=='green'){
 							y=y
 						}
-//						i=i+1
-//						if(i>=1000){
-//							i=0;
-//						}
+						i=i+1
+						if(i>=1000){
+							i=0;
+						}
 					series.addPoint([x, y], true, true);
 					activeLastPointToolip(chart);
 				});//实时更新

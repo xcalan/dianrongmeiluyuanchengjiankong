@@ -24,10 +24,10 @@ var chart = Highcharts.chart('u86_img', {
 						y = data[i].currentA;//A相电流
 						console.log(y);
 						document.getElementById("CurA").innerHTML  = y
-//						i=i+1
-//						if(i>=1000){
-//							i=0;
-//						}
+						i=i+1
+						if(i>=1000){
+							i=0;
+						}
 					series.addPoint([x, y], true, true);
 					activeLastPointToolip(chart);
 				});//实时更新

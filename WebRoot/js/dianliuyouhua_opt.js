@@ -23,10 +23,10 @@ var chart = Highcharts.chart('u301_img', {
 //						y = 14000*Math.random();  // 随机值
 						y = data[i].current_optimize_set;//自愈控制补偿值
 						document.getElementById("cur_opt").innerHTML=y.toFixed(1)
-//						i=i+1
-//						if(i>=1000){
-//							i=0;
-//						}
+						i=i+1
+						if(i>=1000){
+							i=0;
+						}
 					series.addPoint([x, y], true, true);
 					activeLastPointToolip(chart);
 				});//实时更新

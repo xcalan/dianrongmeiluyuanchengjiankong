@@ -18,7 +18,7 @@ public class FurDao {
 		 */
 		public List<Fur> findAllFurData(){
 			try {
-				List<Fur> list = runner.query("select * from data_test order by id_0 desc limit 1", new BeanListHandler<Fur>(Fur.class));
+				List<Fur> list = runner.query("select * from fur_data_simulate", new BeanListHandler<Fur>(Fur.class));
 				return list;
 			} catch (SQLException e) {
 				e.printStackTrace();

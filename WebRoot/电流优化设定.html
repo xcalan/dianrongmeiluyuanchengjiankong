@@ -300,10 +300,10 @@
             setInterval(function () {
 				  	jQuery.getJSON('servlet/FurServlet',null,function(data) {//实时更新
             document.getElementById("per").innerHTML = data[i].current_focast_set;//电流预设定值
-            // i=i+1
-            // if(i>=1000){
-            //   i=0;
-            // }
+            i=i+1
+            if(i>=1000){
+              i=0;
+            }
 				});//实时更新
 				}, 1000);           
           </script>
@@ -671,10 +671,10 @@
                   cur_set= parseFloat(data[i].current_optimize_set/1000);//电流优化设定值
                   sum+=Math.abs(cur_A-cur_set)
                   document.getElementById("jueduiA").innerHTML=parseInt(parseFloat(sum/100000)+parseFloat(1000*Math.random()))
-                //   i=i+1
-                //   if(i>=1000){
-                //     i=0;
-                // }
+                  i=i+1
+                  if(i>=1000){
+                    i=0;
+                }
             });//实时更新
             }, 1000);           
               </script>
@@ -719,10 +719,10 @@
                   cur_set= parseFloat(data[i].current_optimize_set/1000);//电流优化设定值
                   sum+=Math.abs(cur_B-cur_set)
                   document.getElementById("jueduiB").innerHTML=parseInt(parseFloat(sum/100000)+parseFloat(1000*Math.random()))
-                //   i=i+1
-                //   if(i>=1000){
-                //     i=0;
-                // }
+                  i=i+1
+                  if(i>=1000){
+                    i=0;
+                }
             });//实时更新
             }, 1000);           
             </script>
@@ -766,10 +766,10 @@
                   cur_set= parseFloat(data[i].current_optimize_set/1000);//电流优化设定值
                   sum=sum+Math.abs(cur_C-cur_set)                 
                   document.getElementById("jueduiC").innerHTML=parseInt(parseFloat(sum/100000)+parseFloat(1000*Math.random()))
-                //   i=i+1
-                //   if(i>=1000){
-                //     i=0;
-                // }
+                  i=i+1
+                  if(i>=1000){
+                    i=0;
+                }
             });//实时更新
             }, 1000);           
             </script>
@@ -842,12 +842,12 @@
                   sum+=(cur_A-cur_set)*(cur_A-cur_set)
                   ans=Math.sqrt(sum/(i+1)) 
                   document.getElementById("junfangA").innerHTML=ans.toFixed(1)
-                //   i=i+1
-                //   if(i>=1000){
-                //     i=0;
-                //     sum=0;
-                //     ans=0;
-                // }
+                  i=i+1
+                  if(i>=1000){
+                    i=0;
+                    sum=0;
+                    ans=0;
+                }
             });//实时更新
             }, 1000);           
               </script>
@@ -893,12 +893,12 @@
                   sum+=(cur_B-cur_set)*(cur_B-cur_set)
                   ans=Math.sqrt(sum/(i+1)) 
                   document.getElementById("junfangB").innerHTML=ans.toFixed(1)
-                //   i=i+1
-                //   if(i>=1000){
-                //     i=0;
-                //     sum=0;
-                //     ans=0;
-                // }
+                  i=i+1
+                  if(i>=1000){
+                    i=0;
+                    sum=0;
+                    ans=0;
+                }
             });//实时更新
             }, 1000);           
               </script>
@@ -944,12 +944,12 @@
                   sum+=(cur_C-cur_set)*(cur_C-cur_set)
                   ans=Math.sqrt(sum/(i+1)) 
                   document.getElementById("junfangC").innerHTML=ans.toFixed(1)
-                //   i=i+1
-                //   if(i>=1000){
-                //     i=0;
-                //     sum=0;
-                //     ans=0;
-                // }
+                  i=i+1
+                  if(i>=1000){
+                    i=0;
+                    sum=0;
+                    ans=0;
+                }
             });//实时更新
             }, 1000);           
             </script>

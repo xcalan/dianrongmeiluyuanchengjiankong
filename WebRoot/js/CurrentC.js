@@ -23,10 +23,10 @@ var chart = Highcharts.chart('u98_img', {
 //						y = 14000*Math.random();  // 随机值
 						y = data[i].currentC;//C相电流
 					document.getElementById("CurC").innerHTML=y
-//					i=i+1
-//					if(i>=1000){
-//						i=0;
-//					}
+					i=i+1
+					if(i>=1000){
+						i=0;
+					}
 					series.addPoint([x, y], true, true);
 					activeLastPointToolip(chart);
 				});//实时更新
